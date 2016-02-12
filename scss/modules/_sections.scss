@@ -1,0 +1,353 @@
+// Section Background Colors
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.white {
+    background-color: #fff;
+}
+
+.red {
+    background-color: $red;
+}
+
+.purple {
+    background-color: $purple;
+}
+
+.near-black {
+    background-color: $near-black;
+    color: $white;
+}
+
+.blue {
+    background-color: $primary-color;
+    color: $white;
+}
+
+.light-grey {
+    background-color: $secondary-color;
+    color: $white;
+}
+
+
+// Section Styling
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.main {
+
+    &-body {
+        margin-top: 6.5rem;
+    }
+
+    &-anchor {
+        display: block;
+        height: 6.5rem; /*same height as header*/
+        margin-top: -6.5rem; /*same height as header*/
+        visibility: hidden;
+    }
+
+    &-sections {
+
+        padding: 20px 0 40px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+
+        // Project Section Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+        .project {
+
+            &-header {
+                line-height: 6.5rem;
+                margin-bottom: 0;
+            }
+
+            &-image {
+                width: 100%;
+                height: auto;
+
+                &-container {
+                    position:relative;
+                }
+
+                &-overlay {
+                    width:100%;
+                    height:100%;
+                    -webkit-transition: background-color .5s; /* Safari */
+                    transition: background-color .5s;
+                    background-color: none;
+                    position:absolute;
+                    top: 0;
+                    &:hover {
+                        background-color:rgba(51, 195, 240, 0.9)
+                    }
+
+                    a {
+                        opacity: 0;
+                        color: #fff;
+                        display:block;
+                        -webkit-transition: opacity .5s; /* Safari */
+                        transition: opacity .5s;
+                        text-align: center;
+                        font-size:2.2rem;
+                        text-decoration: none;
+                        height: 100%;
+                        width: 100%;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+
+                    }
+                }
+            }
+
+            &-link {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            &-search {
+                background-image: url('../images/search.msu.edu.png');
+            }
+
+            &-maps {
+                background-image: url('../images/maps.msu.edu.png');
+            }
+
+            &-maps-interactive {
+                background-image: url('../images/maps.msu.edu:interactive.png');
+            }
+
+        }
+
+        // Skills Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+        .circle-center {
+            text-align: center;
+        }
+
+        .skills {
+
+            &-language-header {
+
+            }
+
+            &-language-bar {
+                background: #fff;
+                color: #333;
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            &-skill {
+                margin: 0;
+            }
+
+            &-bar {
+                background: #ddd;
+                width: 100%;
+                height: 2rem;
+
+                &-fill {
+                    background: #fff;
+
+                    &-100 {
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        position:relative;
+                    }
+                }
+
+                &-percent {
+                    color: #333;
+                    right:0;
+                    position:absolute;
+                }
+            }
+
+        }
+
+        // Experience Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+        .experience {
+            &-header {
+                color: $light-green;
+            }
+
+            &-job {
+
+                &-title {
+                    margin:0;
+                }
+
+                &-location {
+                    margin:0;
+                    font-size:1.8rem;
+                }
+
+                &-time {
+                    font-size:1.5rem;
+                }
+
+                &-border {
+                    border: 1px solid $light-green;
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+
+        // Education Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+        .education {
+
+            &-header {
+                line-height: 6.5rem;
+                margin-bottom: 0;
+                color: $light-green;
+            }
+
+            &-title {
+                margin-bottom: 0;
+            }
+
+        }
+
+        // About Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+        .about {
+
+            &-header {
+                line-height: 6.5rem;
+                margin-bottom: 0;
+                color: #fff;
+            }
+
+            &-image-container {
+                display: block;
+                width: auto;
+                float: none;
+                margin-bottom: 25px;
+                @media ($bp-larger-than-tablet ) {
+                    display: inline-block;
+                    width: 32%;
+                    float: left;
+                    margin-bottom: 0;
+                }
+
+                @media ($bp-larger-than-desktop ) {
+                    width: 25%;
+                }
+            }
+
+            &-image {
+                border: 0;
+                border-radius: 120px;
+                background-size: cover;
+                background-position: center;
+                max-width: 400px;
+                height: 280px;
+                margin: 10px auto;
+                display: block;
+                @media ($bp-larger-than-tablet ) {
+                    float: left;
+                    margin: 10px 0 0 0;
+                }
+            }
+
+            &-chat {
+
+                width: 280px;
+                float: none;
+                margin: 0 auto;
+
+                @media ($bp-larger-than-mobile ) {
+                    width: 340px;
+                }
+
+                @media ($bp-larger-than-phablet ) {
+                    width: 420px;
+                }
+
+                @media ($bp-larger-than-tablet ) {
+                    width: 68%;
+                    margin: 0 0 0 0;
+                    display: inline-block;
+                    float: left;
+                }
+
+                @media (bp-larger-than-desktop ) {
+                    width: 75%;
+                }
+                .bubble{
+                    background-color: #F2F2F2;
+                    border-radius: 5px;
+                    display: inline-block;
+                    padding: 10px 18px;
+                    position: relative;
+                    vertical-align: top;
+                }
+
+                .bubble::before {
+                    background-color: #F2F2F2;
+                    content: "\00a0";
+                    display: block;
+                    height: 16px;
+                    position: absolute;
+                    top: -8px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    transform:             rotate( 29deg ) skew( -35deg );
+                        -moz-transform:    rotate( 29deg ) skew( -35deg );
+                        -ms-transform:     rotate( 29deg ) skew( -35deg );
+                        -o-transform:      rotate( 29deg ) skew( -35deg );
+                        -webkit-transform: rotate( 29deg ) skew( -35deg );
+                    width:  20px;
+
+                    @media ($bp-larger-than-tablet) {
+                        top: 100px;
+                        margin: 0;
+                    }
+                }
+
+                .me {
+                    float: left;
+                    margin: 0;
+                    @media ($bp-larger-than-tablet) {
+                        margin: 5px 20px 5px 20px;
+                    }
+                }
+
+                .me::before {
+                    left: -9px;
+                }
+            }
+
+        }
+
+        // Contact Styling
+        //––––––––––––––––––––––––––––––––––––––––––––––––––
+
+        .contact {
+
+            &-header {
+                line-height: 6.5rem;
+                margin-bottom: 0;
+            }
+
+        }
+
+    }
+
+}
