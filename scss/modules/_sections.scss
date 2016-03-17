@@ -137,42 +137,96 @@
 
         .skills {
 
-            &-language-header {
+            &-cloud {
+                width: 600px;
+                height: 300px;
+                margin: 0 auto;
+                padding: 2em 0;
+                font: 100% Arial, sans-serif;
+                position: relative;
 
-            }
-
-            &-language-bar {
-                background: #fff;
-                color: #333;
-                text-align: right;
-                padding-right: 20px;
-            }
-
-            &-skill {
-                margin: 0;
-            }
-
-            &-bar {
-                background: #ddd;
-                width: 100%;
-                height: 2rem;
-
-                &-fill {
-                    background: #fff;
-
-                    &-100 {
-                        width: 100%;
-                        height: 100%;
-                        background: #fff;
-                        position:relative;
-                    }
-                }
-
-                &-percent {
-                    color: #333;
-                    right:0;
+                span {
                     position:absolute;
                 }
+
+            }
+
+
+
+            &-1 {
+                top: 1em;
+                left: 1.5em;
+                font-size: 100px;
+                color: #626262;
+            }
+
+            &-2 {
+                top: 2em;
+                left: 2em;
+                font-size: 40px;
+            }
+
+            &-3 {
+                font-size: 60px;
+                -moz-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                top: 2.7em;
+                left: .7em;
+            }
+
+            &-4 {
+                font-size: 30px;
+                top: 6.2em;
+                left: 5em;
+            }
+
+            &-5 {
+                font-size: 40px;
+                -moz-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            &-6 {
+                bottom: .43em;
+                right: 1em;
+                color: #5e0000;
+                font-size: 120px;
+            }
+
+            &-7 {
+
+            }
+
+            &-8 {
+
+            }
+
+            &-9 {
+
+            }
+
+            &-10 {
+
+            }
+
+            &-11 {
+
+            }
+
+            &-12 {
+
+            }
+
+            &-13 {
+
+            }
+
+            &-14 {
+
             }
 
         }
