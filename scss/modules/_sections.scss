@@ -138,7 +138,7 @@
         .skills {
 
             &-cloud {
-                width: 600px;
+                width: 550px;
                 height: 300px;
                 margin: 0 auto;
                 padding: 2em 0;
@@ -150,8 +150,6 @@
                 }
 
             }
-
-
 
             &-1 {
                 top: 1em;
@@ -188,44 +186,92 @@
                 -webkit-transform: rotate(-45deg);
                 -o-transform: rotate(-45deg);
                 transform: rotate(-45deg);
+                bottom: 1.3em;
+                left: 1.4em;
             }
 
             &-6 {
                 bottom: .43em;
-                right: 1em;
+                right: .55em;
                 color: #5e0000;
                 font-size: 120px;
             }
 
             &-7 {
-
+                bottom: 0;
+                right: .5em;
+                font-size: 48px;
             }
 
             &-8 {
-
+                font-size: 50px;
+                -moz-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                top: 1.9em;
+                left: 6.1em;
             }
 
             &-9 {
-
+                bottom: 8.8em;
+                right: 5.8em;
             }
 
             &-10 {
-
+                font-size: 20px;
+                -moz-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                top: 3.2em;
+                left: 9.5em;
+                width: 60px;
             }
 
             &-11 {
-
+                bottom: 2em;
+                left: -1.6em;
+                color: #6e6e6e;
+                font-size: 70px;
+                -moz-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
             }
 
             &-12 {
-
+                bottom: 1em;
+                left: 5.6em;
+                color: #6e6e6e;
+                font-size: 40px;
             }
 
             &-13 {
-
+                left: 2.4em;
+                top: 2.2em;
             }
 
             &-14 {
+                top: 10em;
+                left: 11.3em;
+                -moz-transform: rotate(-6deg);
+                -webkit-transform: rotate(-6deg);
+                -o-transform: rotate(-6deg);
+                transform: rotate(-6deg);
+            }
+
+            &-15 {
+                top: 3.7em;
+                left: 8.5em;
+                -moz-transform: rotate(-6deg);
+                -webkit-transform: rotate(-6deg);
+                -o-transform: rotate(-6deg);
+                transform: rotate(90deg);
+                font-size: 50px;
+            }
+
+            &-16 {
 
             }
 
