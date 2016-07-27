@@ -7,16 +7,16 @@
 // there.
 
 // Larger than mobile
-@media (#{$bp-larger-than-mobile}) {}
+@media (#{$bp-400}) {}
 
 // Larger than phablet (also point when grid becomes active)
-@media (#{$bp-larger-than-phablet}) {}
+@media (#{$bp-550}) {}
 
 // Larger than tablet
-@media (#{$bp-larger-than-tablet}) {}
+@media (#{$bp-750}) {}
 
 // Larger than desktop
-@media (#{$bp-larger-than-desktop}) {}
+@media (#{$bp-1000}) {}
 
 // Larger than Desktop HD
-@media (#{$bp-larger-than-desktophd}) {}
+@media (#{$bp-1200}) {}

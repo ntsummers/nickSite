@@ -2,12 +2,12 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Breakpoints
-$bp-larger-than-mobile    : "min-width: 400px" !default;
-$bp-larger-than-phablet   : "min-width: 550px" !default;
-$bp-larger-than-tablet    : "min-width: 750px" !default;
-$bp-menu-nav-begins       : "min-width: 895px" !default;
-$bp-larger-than-desktop   : "min-width: 1000px" !default;
-$bp-larger-than-desktophd : "min-width: 1200px" !default;
+$bp-400  : "min-width: 400px" !default;
+$bp-550  : "min-width: 550px" !default;
+$bp-750  : "min-width: 750px" !default;
+$bp-895  : "min-width: 895px" !default;
+$bp-1000 : "min-width: 1000px" !default;
+$bp-1200 : "min-width: 1200px" !default;
 
 // Colors
 $light-grey: #e1e1e1 !default;
