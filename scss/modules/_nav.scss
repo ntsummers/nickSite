@@ -10,7 +10,7 @@ label[for="nav-trigger"] {
     position: absolute;
     cursor: pointer;
     right: 20px;
-    top: 15px;
+    top: 19px;
     display: block;
     color: #fff;
     @media ($bp-550) {right: 60px; }
@@ -18,7 +18,7 @@ label[for="nav-trigger"] {
 
     &:hover {
         color: $primary-color;
-        cursor: pointer;    
+        cursor: pointer;
     }
 }
 
