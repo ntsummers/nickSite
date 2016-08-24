@@ -1,6 +1,69 @@
 // Navbar styling
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 15px;
+    display: block;
+    color: #fff;
+    @media ($bp-550) {right: 60px; }
+    @media ($bp-895) { display: none; }
+
+    &:hover {
+        color: $primary-color;
+        cursor: pointer;    
+    }
+}
+
+.nav-trigger:checked + label {
+
+}
+
+.nav-trigger:checked ~ .navbar-list-container {
+    top: 100px;
+    box-shadow: 0 10px 5px 0px rgba(0,0,0,0.5);
+    opacity: 1;
+
+    @media ($bp-895) {
+        box-shadow: none;
+    }
+}
+
+.navbar-list-container {
+    top: 65px;
+    display: inline-block;
+    background: #fff;
+    height: 200px;
+    width: 100%;
+    opacity: 0;
+    transition: all .2s;
+
+    @media ($bp-550) {
+        width: 100%;
+        height: 50px
+    }
+
+    @media ($bp-895) {
+        transition: none;
+        top: 0;
+        background: transparent;
+        display: inline-block;
+        height: 65px;
+        width: 600px;
+        opacity: 1;
+        transition: none;
+        float: left;
+    }
+}
+
+
 .navbar {
     display: block;
     width: 100%;
@@ -14,46 +77,81 @@
     &-list {
         list-style: none;
         margin-bottom: 0;
+
+        @media ($bp-895) {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 960px
+        }
     }
 
     &-item {
         position: relative;
         float: left;
         margin-bottom: 0;
-        display: none;
-        @media ($bp-895) {
-            display: block;
+        display: block;
+        width: 100%;
+        height: 20%;
+        line-height: 40px;
+        text-align: center;
+
+        @media ($bp-550) {
+            line-height: 50px;
+            width: 20%;
+            height: 100%;
         }
     }
 
     &-image {
-        margin-top: 17px;
-        margin-right: 10px;
-        @media ($bp-895) {
-            margin-right: 35px;
-        }
+        margin: 17px 10px 0 0;
     }
 
     &-link {
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 600;
         letter-spacing: .2rem;
         margin-right: 35px;
         text-decoration: none;
         line-height: 6.5rem;
-        color: #fff;
+        color: #000;
         transition: all .2s;
         -webkit-transition: all .2s;
+        display: block;
+        height: 100%;
+        line-height: 40px;
+        margin: 0;
+
+        @media ($bp-550) {
+            line-height: 50px
+        }
+
+        @media ($bp-895) {
+            line-height: 65px;
+            color: #fff;
+            font-size: 11px;
+        }
 
         &:hover, &:focus {
             color: $link-color;
+            text-decoration: underline;
         }
     }
 
     .header-image {
         display: block;
-        margin-right: 10px;
+        margin: 0 10px 0 20px;;
+        width: 200px;
+
+        @media ($bp-550) {
+            margin: 0 10px 0 60px;
+        }
+
+        @media ($bp-895) {
+            width: auto;
+            float: left;
+            margin-left: 0;
+        }
     }
 
     .header-text {
@@ -71,6 +169,7 @@
         display: block;
         margin-right: 0;
         float: right;
+        margin-top: 5px;
         @media ($bp-895) {
             display: none;
         }
@@ -78,7 +177,6 @@
 
     .dark {
         color: #fff;
-        background: #000;
         padding: 8px;
         border-radius: 5px;
 

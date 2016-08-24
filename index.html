@@ -32,19 +32,22 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <nav class="navbar">
-        <div class="container">
-            <ul class="navbar-list">
-                <li class="navbar-item header-image"><img src="images/favicon.png" alt="Nicholas Summers Icon" class="navbar-image">
-                    <h1 class="navbar-item header-text">Nicholas Summers</h1>
-                </li>
-                <li class="navbar-item"><a href="#Projects"   class="navbar-link">About</a></li>
-                <li class="navbar-item"><a href="#Skills"     class="navbar-link">Projects</a></li>
-                <li class="navbar-item"><a href="#Experience" class="navbar-link">Experience</a></li>
-                <li class="navbar-item"><a href="#Education"  class="navbar-link">Education</a></li>
-                <li class="navbar-item"><a href="#Contact"    class="navbar-link">Contact</a></li>
-                <li class="navbar-item menu"><i class="fa fa-bars fa-lg navbar-image menu dark"></i></li>
-            </ul>
-        </div>
+        <ul class="navbar-list">
+            <li class="header-image"><img src="images/favicon.png" alt="Nicholas Summers Icon" class="navbar-image">
+                <h1 class="header-text">Nicholas Summers</h1>
+            </li>
+
+            <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+            <label for="nav-trigger"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></label>
+
+            <div class="navbar-list-container">
+                <li class="navbar-item"><a onclick="closeNav()" href="#About"      class="navbar-link">About</a></li>
+                <li class="navbar-item"><a onclick="closeNav()" href="#Projects"   class="navbar-link">Projects</a></li>
+                <li class="navbar-item"><a onclick="closeNav()" href="#Experience" class="navbar-link">Experience</a></li>
+                <li class="navbar-item"><a onclick="closeNav()" href="#Education"  class="navbar-link">Education</a></li>
+                <li class="navbar-item"><a onclick="closeNav()" href="#Contact"    class="navbar-link">Contact</a></li>
+            </div>
+        </ul>
     </nav>
 
     <main class="main-body">
@@ -63,7 +66,7 @@
                 </div>
 
                 <div class="about-chat">
-                    <div class="bubble me">Bacon ipsum dolor amet ball tip boudin hamburger cow ham, leberkas pancetta strip steak pork prosciutto landjaeger. Salami pork tri-tip short ribs shank pancetta. Meatball pork chop shoulder prosciutto, pork chuck bacon spare ribs chicken venison. Kielbasa hamburger chuck beef ribs, swine salami biltong. Meatloaf rump spare ribs short ribs shankle prosciutto chicken, salami meatball. Venison hamburger swine spare ribs shoulder, capicola t-bone pig cupim short loin andouille turkey.</div>
+                    <div class="bubble me">I am a hard working, detail oriented, soon to be graduate who is seeking a challenging position to utilize my experience and education. I am looking to leverage my diverse experience as a full-stack developer and project manager to take on ever expanding roles.</div>
                 </div>
             </div>
 
@@ -125,20 +128,30 @@
                 </div>
                 <div class="row">
                     <div class="twelve columns">
-                        <p class="experience-job-description">Managing, creating, and updating current MSU sites which can receive over 10,000 hits a day. Extensive use of HTML, CSS, JavaScript, PHP, and jQuery. Front and backend development. Created, designed, and updated sites to be responsive, as well as introducing SASS to current sites. Use of Google Maps API including: polylines, info windows, polygons, and markers. Adding Google Analytics implementation and tracking.</p>
+                        <p class="experience-job-description">Create, manage, and update high-visibility MSU websites with exten- sive use of full-stack development. Optimize sites for SEO, introduce responsive design, and hold sites to AA accessibility compliance. Extensive use of Google Maps API, Google Analytics, and MSU API’s.</p>
+                        <p class="experience-job-achievement-header"> Achievements: </p>
+                        <ul class="experience-job-achievement-list">
+                            <li>Worked on MSU Search Services which consist of 5 web properties averaging over 400,000 sessions per month.</li>
+                            <li>Completely rewrote and redesigned Maps.msu.edu from the ground up</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="experience-job-border"></div>
                 <div class="row">
                     <div class="twelve columns">
-                        <h4 class="experience-job-title"> Pre-Professional IT Intern </h4>
+                        <h4 class="experience-job-title"> IT Intern </h4>
                         <h5 class="experience-job-location"> Kellogg </h5>
                         <h6 class="experience-job-time">May 2015 - August 2015</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="twelve columns">
-                        <p class="experience-job-description">Cloud based infrastructure using Amazon Web Services. Creating websites using PHP, MySQL, HTML, CSS, and Javascript. Created wire frames and designs for updating current Kellogg Sites. Was Project Manager and presented to 40 8th grade middle school students on Thermodynamics through the use of Ice Cream. Created Gamification projects to be used in educating and motivating current employees. Created empathy maps and personas for website on-boarding experience. Created storyboards and designs for mobile applications.</p>
+                        <p class="experience-job-description">Project manager and led teams to success on multiple projects such as the creation of an API to be used by Kellogg’s IT team. Introduced gami cation to increase customer service among the global employ- ee help desks. Created wireframes, empathy maps, and personas to increase usability of current Kellogg websites. Taught and presented to 40 8th grade middle school students on thermodynamics.</p>
+                        <p class="experience-job-achievement-header"> Achievements: </p>
+                        <ul class="experience-job-achievement-list">
+                            <li>Oversaw, designed and created an API to help transition Kel- logg’s servers to Amazon Web Services.</li>
+                            <li>Designed wireframes for Kellogg’s internal global employee website that was approved by the CIO.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -219,7 +232,8 @@
         <div class="container">
             <div class="row">
                 <div class="twelve columns">
-                    <p class="footer-createdby">Created by Nicholas Summers 2016 using <a href="//getskeleton.com/">Skeleton Boilerplate</a>, <a href="//bower.io/">Bower</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="//sass-lang.com/">Sass</a></p>
+                    <p class="footer-createdby">Created by Nicholas Summers 2016 using <a href="//getskeleton.com/">Skeleton Boilerplate</a>, <a href="//bower.io/">Bower</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="//sass-lang.com/">Sass</a>.</p>
+                    <p class="footer-addendum">Want to dig into the code? You can find me on <a href="Github</a>! </p>
                 </div>
             </div>
         </div>
@@ -240,6 +254,13 @@
     	    echo '<p>Something went wrong, go back and try again!</p>';
     	}
     ?>
+
+    <script>
+        //This function closes the navigation for mobile users when clicking a link.
+        function closeNav() {
+            document.getElementById("nav-trigger").checked = false;
+        }
+    </script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
