@@ -695,18 +695,19 @@ label[for="nav-trigger"] {
 .nav-trigger:checked ~ .navbar-list-container {
   top: 100px;
   box-shadow: 0 10px 5px 0px rgba(0, 0, 0, 0.5);
-  opacity: 1; }
+  opacity: 1;
+  display: inline-block; }
   @media (min-width: 895px) {
     .nav-trigger:checked ~ .navbar-list-container {
       box-shadow: none; } }
 
 .navbar-list-container {
   top: 65px;
-  display: inline-block;
   background: #fff;
   height: 200px;
   width: 100%;
   opacity: 0;
+  display: none;
   transition: all .2s; }
   @media (min-width: 550px) {
     .navbar-list-container {

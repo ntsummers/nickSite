@@ -26,6 +26,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
+  <!-- jQuery
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -200,27 +204,27 @@
                         <h3 class="contact-header"> Contact Me! </h3>
                     </div>
                 </div>
-                <form action="MAILTO:ntsummers1@gmail.com" method="POST" enctype="text/plain">
+                <form id="#mail-form" action="index.php" method="POST" enctype="text/plain" onsubmit="{return false;}">
                     <div class="row">
                         <div class="six columns">
-                            <label for="exampleEmailInput">Your email</label>
-                            <input name="exampleEmailInput" class="u-full-width" type="email" placeholder="yourEmail@mailbox.com" id="exampleEmailInput">
+                            <label for="EmailInput">Your email</label>
+                            <input name="EmailInput" class="u-full-width" type="email" placeholder="yourEmail@mailbox.com" id="EmailInput">
                         </div>
                         <div class="six columns">
-                            <label for="exampleRecipientInput">Reason for contacting</label>
-                            <select name="exampleRecipientInput" class="u-full-width" id="exampleRecipientInput">
-                                <option value="Option 1">Questions</option>
-                                <option value="Option 2">Comments</option>
-                                <option value="Option 3">Requests</option>
-                                <option value="Option 4">Other</option>
+                            <label for="ReasonInput">Reason for contacting</label>
+                            <select name="ReasonInput" class="u-full-width" id="ReasonInput">
+                                <option value="Questions">Questions</option>
+                                <option value="Comments">Comments</option>
+                                <option value="Requests">Requests</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
-                    <label for="exampleMessage">Message</label>
-                        <textarea name="exampleMessage" class="u-full-width" placeholder="Hi Nick!" id="exampleMessage"></textarea>
+                    <label for="Message">Message</label>
+                        <textarea name="Message" class="u-full-width" placeholder="Hi Nick!" id="Message"></textarea>
                     </label>
 
-                    <input class="button-primary" type="submit" value="Submit">
+                    <input class="button-primary" name="submit" type="submit" value="Submit">
                 </form>
             </div>
 
@@ -239,23 +243,23 @@
         </div>
     </footer>
 
-    <?php
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $to = 'ntsummers1@gmail.com';
-        $subject = 'Ntsummers1.com Comment';
-        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-
-        if ($_POST['submit']) {
-            if (mail($to, $subject, $body, $name)) {
-    	    echo '<p>Your message has been sent!</p>';
-    	    } else {
-    	    echo '<p>Something went wrong, go back and try again!</p>';
-    	}
-    ?>
-
     <script>
+        //This function allows for the contact form to submit and send mail without
+        //reloading the page! :D
+        $(document).ready(function() {
+          $("form").submit(function() {
+
+            $.ajax({
+              type: "POST",
+              url: "php/mail.php",
+              data: $(this).serialize(),
+              success: function() {
+                  console.log("Made it here!");
+              }
+              });
+
+          });
+      });
         //This function closes the navigation for mobile users when clicking a link.
         function closeNav() {
             document.getElementById("nav-trigger").checked = false;

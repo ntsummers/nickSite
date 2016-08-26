@@ -30,6 +30,7 @@ label[for="nav-trigger"] {
     top: 100px;
     box-shadow: 0 10px 5px 0px rgba(0,0,0,0.5);
     opacity: 1;
+    display: inline-block;
 
     @media ($bp-895) {
         box-shadow: none;
@@ -38,11 +39,11 @@ label[for="nav-trigger"] {
 
 .navbar-list-container {
     top: 65px;
-    display: inline-block;
     background: #fff;
     height: 200px;
     width: 100%;
     opacity: 0;
+    display: none;
     transition: all .2s;
 
     @media ($bp-550) {
