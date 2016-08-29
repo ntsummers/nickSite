@@ -150,10 +150,10 @@
                 </div>
                 <div class="row">
                     <div class="twelve columns">
-                        <p class="experience-job-description">Project manager and led teams to success on multiple projects such as the creation of an API to be used by Kellogg’s IT team. Introduced gami cation to increase customer service among the global employ- ee help desks. Created wireframes, empathy maps, and personas to increase usability of current Kellogg websites. Taught and presented to 40 8th grade middle school students on thermodynamics.</p>
+                        <p class="experience-job-description">Project manager and led teams to success on multiple projects such as the creation of an API to be used by Kellogg’s IT team. Introduced gami cation to increase customer service among the global employee help desks. Created wireframes, empathy maps, and personas to increase usability of current Kellogg websites. Taught and presented to 40 8th grade middle school students on thermodynamics.</p>
                         <p class="experience-job-achievement-header"> Achievements: </p>
                         <ul class="experience-job-achievement-list">
-                            <li>Oversaw, designed and created an API to help transition Kel- logg’s servers to Amazon Web Services.</li>
+                            <li>Oversaw, designed and created an API to help transition Kellogg’s servers to Amazon Web Services.</li>
                             <li>Designed wireframes for Kellogg’s internal global employee website that was approved by the CIO.</li>
                         </ul>
                     </div>
@@ -204,7 +204,7 @@
                         <h3 class="contact-header"> Contact Me! </h3>
                     </div>
                 </div>
-                <form id="#mail-form" action="index.php" method="POST" enctype="text/plain" onsubmit="{return false;}">
+                <form id="#mail-form" class="contact-form" action="index.php" method="POST" enctype="text/plain" onsubmit="{return false;}">
                     <div class="row">
                         <div class="six columns">
                             <label for="EmailInput">Your email</label>
@@ -220,11 +220,17 @@
                             </select>
                         </div>
                     </div>
+
                     <label for="Message">Message</label>
                         <textarea name="Message" class="u-full-width" placeholder="Hi Nick!" id="Message"></textarea>
                     </label>
 
-                    <input class="button-primary" name="submit" type="submit" value="Submit">
+                    <input class="contact-form-primary button-primary" name="submit" type="submit" value="Submit">
+                    <div id="contact-form-response" class="contact-form-response">
+                        <i id="contact-form-response-cog" class="fa fa-3x fa-cog fa-spin contact-form-response-cog" aria-hidden="true"></i>
+                        <div id="contact-form-response-success" class="contact-form-response-success"><p>Success</p>
+                        <button id="contact-form-response-button" class="contact-form-response-button" onclick="reopenForm()">Forgot something? Send me another email!</button></div>
+                    </div>
                 </form>
             </div>
 
@@ -244,21 +250,57 @@
     </footer>
 
     <script>
+
+        var formResponse = document.getElementById("contact-form-response");
+        var formCog      = document.getElementById("contact-form-response-cog");
+        var formSuccess  = document.getElementById("contact-form-response-success");
+        var formButton   = document.getElementById("contact-form-response-button");
+
         //This function allows for the contact form to submit and send mail without
         //reloading the page! :D
         $(document).ready(function() {
             $("form").submit(function() {
+
+                formResponse.style.display = "block";
+                formResponse.style.opacity = "1";
+                formCog.style.display = "block";
+                formCog.style.opacity = "1";
+
 
                 $.ajax({
                     type: "POST",
                     url: "php/mail.php",
                     data: $(this).serialize(),
                     success: function() {
-                        console.log("Made it here!");
+                        formCog.style.opacity = "0";
+                        setTimeout(function() {
+                            formCog.style.display = "none";
+                        }, 600)
+
+                        formSuccess.style.display = "block";
+                        formSuccess.style.opacity = "1";
+
+                        formButton.style.display  = "block";
+                        formButton.style.opacity  = "1";
+
                     }
                 });
             });
         });
+
+        //After sending an email, this function allows the user to send another incase they forgot something!
+        function reopenForm() {
+            formSuccess.style.opacity  = "0";
+            formResponse.style.opacity = "0";
+            formButton.style.opacity   = "0";
+
+            setTimeout(function() {
+                formSuccess.style.display  = "none";
+                formResponse.style.display = "none";
+                formButton.style.display   = "none";
+            }, 600)
+        }
+
         //This function closes the navigation for mobile users when clicking a link.
         function closeNav() {
             document.getElementById("nav-trigger").checked = false;
